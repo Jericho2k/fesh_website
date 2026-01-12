@@ -21,6 +21,10 @@ def track(action):
         f.write(f"{datetime.now()}: {action}\n")
     return '', 204
 
+@app.route('/healthz')
+def healthz():
+    return '', 200
+
 @app.route('/stats101')
 def stats():
     log_file = 'stats.log'
