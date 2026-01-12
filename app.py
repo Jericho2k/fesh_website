@@ -14,6 +14,10 @@ def index():
 def contact():
     return render_template('contact.html')
 
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
 @app.route('/track/<action>', methods=['POST'])
 def track(action):
     log_file = 'stats.log'
